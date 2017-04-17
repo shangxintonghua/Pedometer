@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">悦心运动</string>
+
+
+    <!--首页模块-->
+    <string name="name_index">首页</string>
+
+
+    <!--食物模块，包括商业推广-->
+    <string name="name_food">食物</string>
+
+
+    <!--跑步模块-->
+    <string name="name_running">跑步</string>
+
+    <!--发现模块-->
+    <string name="name_discover">发现</string>
+
+
+
+
+
+
+
+
+    <!--个人模块-->
+    <string name="name_mine">我的</string>
 </resources>

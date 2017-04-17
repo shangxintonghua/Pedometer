@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--首页底部栏-->
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_home"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/name_index"
+            android:src="@drawable/home_selector"
+            android:id="@+id/iv_home"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+        <TextView
+            android:textSize="12sp"
+
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_home"
+            android:textStyle="bold"
+            android:textColor="@color/module_unactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_index"/>
+
+    </LinearLayout>
+
+    <!--食物底部栏-->
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_food"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/name_food"
+            android:src="@drawable/food_selector"
+            android:id="@+id/iv_food"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+        <TextView
+            android:textSize="12sp"
+
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/module_unactive"
+             android:id="@+id/tv_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_food"/>
+
+    </LinearLayout>
+
+   <!--跑步底部栏-->
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_run"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/name_running"
+            android:background="?attr/colorPrimary"
+            android:src="@drawable/run"
+            android:id="@+id/iv_run"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
+    <!--发现底部栏-->
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_discover"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/name_discover"
+            android:src="@drawable/discover_selector"
+            android:id="@+id/iv_discover"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+        <TextView
+            android:textSize="12sp"
+
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/module_unactive"
+            android:id="@+id/tv_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_discover"/>
+
+    </LinearLayout>
+
+    <!--个人底部栏-->
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_mine"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/name_mine"
+            android:src="@drawable/mine_selector"
+            android:id="@+id/iv_mine"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+        <TextView
+            android:textSize="12sp"
+
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/module_unactive"
+            android:id="@+id/tv_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_mine"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

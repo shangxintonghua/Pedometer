@@ -1,0 +1,11 @@
+<resources>
+
+
+    <!--自定义的style 对于消除默认的title不起作用-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>//是否设置actionbar\
+        <item name="android:windowNoTitle">true</item>//是否设置标题
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
