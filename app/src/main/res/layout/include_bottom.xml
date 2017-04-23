@@ -20,8 +20,8 @@
             android:contentDescription="@string/name_index"
             android:src="@drawable/home_selector"
             android:id="@+id/iv_home"
-            android:layout_width="28dp"
-            android:layout_height="28dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
         <TextView
             android:textSize="12sp"
 
@@ -49,8 +49,8 @@
             android:contentDescription="@string/name_food"
             android:src="@drawable/food_selector"
             android:id="@+id/iv_food"
-            android:layout_width="28dp"
-            android:layout_height="28dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
         <TextView
             android:textSize="12sp"
 
@@ -66,22 +66,23 @@
 
    <!--跑步底部栏-->
     <LinearLayout
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/ll_run"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:gravity="center"
-
+        android:background="?attr/colorPrimary"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:contentDescription="@string/name_running"
-            android:background="?attr/colorPrimary"
+
             android:src="@drawable/run"
             android:id="@+id/iv_run"
-            android:layout_width="60dp"
-            android:layout_height="40dp" />
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
 
 
     </LinearLayout>
@@ -100,8 +101,8 @@
             android:contentDescription="@string/name_discover"
             android:src="@drawable/discover_selector"
             android:id="@+id/iv_discover"
-            android:layout_width="28dp"
-            android:layout_height="28dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
         <TextView
             android:textSize="12sp"
 
@@ -129,8 +130,8 @@
             android:contentDescription="@string/name_mine"
             android:src="@drawable/mine_selector"
             android:id="@+id/iv_mine"
-            android:layout_width="28dp"
-            android:layout_height="28dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
         <TextView
             android:textSize="12sp"
 

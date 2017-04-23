@@ -1,5 +1,4 @@
-package william.architecture.pedometer.food;
-
+package william.architecture.pedometer.discover;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,19 +13,18 @@ import java.util.List;
 
 import william.architecture.pedometer.CommonAdapter;
 import william.architecture.pedometer.R;
-import william.architecture.pedometer.food.model.Food;
+import william.architecture.pedometer.discover.model.Article;
 
 /**
- * Created by Administrator on 2017/4/17.
- * description:食谱fragment
+ * Created by Administrator on 2017/4/23.
  */
 
-public class FoodFragment extends Fragment {
-    private ListView mFoodList;
+public class DiscoverFragment extends Fragment {
+    private ListView mArtilces;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.food_fragment,container,false);
+        return inflater.inflate(R.layout.discover_fragment,container,false);
     }
 
     @Override
@@ -40,7 +38,7 @@ public class FoodFragment extends Fragment {
      * 初始化控件
      */
     private void assignViews(){
-        mFoodList=(ListView)getActivity().findViewById(R.id.lv_food);
+        mArtilces=(ListView)getActivity().findViewById(R.id.lv_discover);
 
     }
 
@@ -48,13 +46,13 @@ public class FoodFragment extends Fragment {
      * 初始化listview采用万能适配器
      */
     private void initData(){
-        List<Food> foods=new ArrayList<>();
+        List<Article> articles=new ArrayList<>();
         for(int i=0;i<10;i++){
-            foods.add(new Food());
+            articles.add(new Article());
         }
-        mFoodList.setAdapter(new CommonAdapter<Food>(getContext(),foods,R.layout.item_food) {
+        mArtilces.setAdapter(new CommonAdapter<Article>(getContext(),articles,R.layout.item_discover) {
             @Override
-            protected void convertView(View item, Food food) {
+            protected void convertView(View item, Article food) {
 
             }
         });

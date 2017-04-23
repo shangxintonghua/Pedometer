@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import william.architecture.pedometer.discover.activity.DiscoverFragment;
+import william.architecture.pedometer.discover.DiscoverFragment;
 import william.architecture.pedometer.food.FoodFragment;
 import william.architecture.pedometer.home.HomeFragment;
 import william.architecture.pedometer.mine.MineFragment;
@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Fragment discover_fragment;
     private Fragment mine_fragment;
 
+
+    //标题
+    private TextView tv_title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +78,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
      * description:初始化控件
      */
     private void initView(){
+        tv_title=(TextView)findViewById(R.id.tv_title);
+
         ll_home=(LinearLayout)findViewById(R.id.ll_home);
         ll_food=(LinearLayout)findViewById(R.id.ll_food);
         ll_run=(LinearLayout)findViewById(R.id.ll_run);
@@ -185,22 +191,25 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 iv_home.setImageResource(R.drawable.home_active);
                 tv_home.setTextColor(getResources().getColor(R.color.module_active));
                 initFragment(0);
-
+                setCoumtTitle("首页");
                 break;
             case R.id.ll_food:
                 iv_food.setImageResource(R.drawable.food_active);
                 tv_food.setTextColor(getResources().getColor(R.color.module_active));
                 initFragment(1);
+                setCoumtTitle("推荐食物");
                 break;
             case R.id.ll_discover:
                 iv_discover.setImageResource(R.drawable.discover_active);
                 tv_discover.setTextColor(getResources().getColor(R.color.module_active));
                 initFragment(2);
+                setCoumtTitle("发现");
                 break;
             case R.id.ll_mine:
                 iv_mine.setImageResource(R.drawable.mine_active);
                 tv_mine.setTextColor(getResources().getColor(R.color.module_active));
                 initFragment(3);
+                setCoumtTitle("个人中心");
                 break;
             case R.id.ll_run:
                 break;
@@ -212,6 +221,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     //重置按钮
     private void restartBotton(){
+
+
         iv_home.setImageResource(R.drawable.home_unactive);
         iv_food.setImageResource(R.drawable.food_unactive);
         iv_discover.setImageResource(R.drawable.discover_unactive);
@@ -222,5 +233,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         tv_food.setTextColor(getResources().getColor(R.color.module_unactive));
         tv_discover.setTextColor(getResources().getColor(R.color.module_unactive));
         tv_mine.setTextColor(getResources().getColor(R.color.module_unactive));
+    }
+    private void setCoumtTitle(String title){
+        tv_title.setText(title);
     }
 }
