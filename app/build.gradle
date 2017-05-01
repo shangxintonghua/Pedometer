@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
-   /* 兼容Android6.0系统所需，如果这句话报错，可在dependencies标签下使用compile 'cn.bmob.android:http-legacy:1.0'*/
+    /* 兼容Android6.0系统所需，如果这句话报错，可在dependencies标签下使用compile 'cn.bmob.android:http-legacy:1.0'*/
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "william.architecture.pedometer"
@@ -26,17 +26,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    testCompile 'junit:junit:4.12'
     compile files('libs/lite-orm-1.7.0.jar')
     compile files('libs/AMap3DMap_5.0.0_AMapNavi_5.0.1_AMapSearch_5.0.0_AMapLocation_3.4.0_20170427.jar')
     compile files('libs/mpandroidchartlibrary-2-1-6.jar')
 
     //bmob-sdk
-    compile 'cn.bmob.android:bmob-sdk:3.5.5'
     //glide
+    
+
+
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'cn.bmob.android:bmob-sdk:3.5.5'
     compile 'com.github.bumptech.glide:glide:3.5.2'
-
-
-
+    compile 'com.android.support:design:25.0.0'
+    testCompile 'junit:junit:4.12'
 }

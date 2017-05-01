@@ -1,6 +1,7 @@
 package william.architecture.pedometer.mine;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import william.architecture.pedometer.R;
+import william.architecture.pedometer.logregi.LoginActivity;
+import william.architecture.pedometer.until.SharedPreferencesUtils;
 
 /**
  * Created by Administrator on 2017/4/17.
@@ -24,6 +27,12 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private LinearLayout ll_agerment;
     private LinearLayout ll_share;
     private LinearLayout ll_setting;
+
+    private LinearLayout ll_person;
+
+    private LinearLayout ll_target_step;
+    private LinearLayout ll_target_weight;
+
 
 
 
@@ -46,11 +55,14 @@ public class MineFragment extends Fragment implements View.OnClickListener {
      */
     private void assignViews(){
         ll_report=(LinearLayout)getActivity().findViewById(R.id.ll_report);
-        ll_bluetood=(LinearLayout)getActivity().findViewById(R.id.ll_bluetood);
+        ll_bluetood=(LinearLayout)getActivity().findViewById(R.id.ll_medal);
         ll_question=(LinearLayout)getActivity().findViewById(R.id.ll_question);
         ll_agerment=(LinearLayout)getActivity().findViewById(R.id.ll_agerment);
         ll_share=(LinearLayout)getActivity().findViewById(R.id.ll_share);
         ll_setting=(LinearLayout)getActivity().findViewById(R.id.ll_setting);
+        ll_person=(LinearLayout)getActivity().findViewById(R.id.ll_person);
+        ll_target_step=(LinearLayout)getActivity().findViewById(R.id.ll_target_step);
+        ll_target_weight=(LinearLayout)getActivity().findViewById(R.id.ll_target_weight);
 
         //bind the clicklistener
         ll_report.setOnClickListener(this);
@@ -59,24 +71,21 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         ll_agerment.setOnClickListener(this);
         ll_share.setOnClickListener(this);
         ll_setting.setOnClickListener(this);
+        ll_person.setOnClickListener(this);
+        ll_target_step.setOnClickListener(this);
+        ll_target_weight.setOnClickListener(this);
 
     }
 
-    /**
-     * 搜索蓝牙设备
-     */
-    private void search(){
-
-    }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.ll_report:
                 break;
-            case R.id.ll_bluetood:
+            case R.id.ll_medal:
                 //搜索蓝牙设备
-                search();
+
                 break;
             case R.id.ll_question:
                 break;
@@ -86,6 +95,29 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ll_setting:
                 break;
+            case R.id.ll_person:
+                isLogin();
+                break;
+
+            case R.id.ll_target_step:
+                break;
+            case R.id.ll_target_weight:
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * 检查是否已经登陆
+     */
+    private void isLogin(){
+        SharedPreferencesUtils sharedPreferencesUtils=new SharedPreferencesUtils(getContext());
+
+        if (sharedPreferencesUtils.getParam("user","")!=""){
+            startActivity(new Intent(getActivity(),PersonDetail.class));
+        }else {
+            startActivity(new Intent(getActivity(), LoginActivity.class));
         }
     }
 }

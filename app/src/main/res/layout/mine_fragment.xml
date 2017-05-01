@@ -13,6 +13,7 @@
 
         <!--头像设置-->
         <LinearLayout
+            android:id="@+id/ll_person"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                 android:layout_height="48dp" />
             <TextView
                 android:layout_marginTop="5dp"
-                android:text="编辑资料"
+                android:text="你还没有登陆"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
@@ -47,6 +48,7 @@
 
             <!--目标步数设置-->
             <LinearLayout
+                android:id="@+id/ll_target_step"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -65,6 +67,7 @@
 
             <!--体重设置-->
             <LinearLayout
+                android:id="@+id/ll_target_weight"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -119,7 +122,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_bluetood"
+                android:id="@+id/ll_medal"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
