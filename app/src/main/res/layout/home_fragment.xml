@@ -145,6 +145,7 @@
         android:layout_height="1px"
         android:background="@color/grey"/>
     <LinearLayout
+        android:id="@+id/ll_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout

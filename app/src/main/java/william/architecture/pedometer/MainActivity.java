@@ -1,6 +1,7 @@
 package william.architecture.pedometer;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ import william.architecture.pedometer.discover.DiscoverFragment;
 import william.architecture.pedometer.food.FoodFragment;
 import william.architecture.pedometer.home.HomeFragment;
 import william.architecture.pedometer.mine.MineFragment;
+import william.architecture.pedometer.running.ShowLocationActivity;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
@@ -97,6 +99,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         iv_food=(ImageView)findViewById(R.id.iv_food);
         iv_discover=(ImageView)findViewById(R.id.iv_discover);
         iv_mine=(ImageView)findViewById(R.id.iv_mine);
+
+        //初始化到首页
+        iv_home.setImageResource(R.drawable.home_active);
+        tv_home.setTextColor(getResources().getColor(R.color.module_active));
+        initFragment(0);
+        setCoumtTitle("首页");
 
     }
 
@@ -212,6 +220,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 setCoumtTitle("个人中心");
                 break;
             case R.id.ll_run:
+                startActivity(new Intent(MainActivity.this, ShowLocationActivity.class));
                 break;
             default:
                 break;

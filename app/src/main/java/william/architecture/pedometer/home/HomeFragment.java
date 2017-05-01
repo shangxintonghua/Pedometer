@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -36,7 +37,7 @@ import william.architecture.pedometer.view.StepArcView;
  * description:首页fragment
  */
 
-public class HomeFragment extends Fragment implements Handler.Callback{
+public class HomeFragment extends Fragment implements Handler.Callback,View.OnClickListener{
 
     private SharedPreferencesUtils sp;
     private StepArcView stepArcView;
@@ -48,6 +49,8 @@ public class HomeFragment extends Fragment implements Handler.Callback{
 
     private static String CURRENTDATE = "";//当前时间
     private int  CURRENT_SETP;//当前步数
+
+    private LinearLayout mRecord;//锻炼记录
 
 
 
@@ -63,7 +66,7 @@ public class HomeFragment extends Fragment implements Handler.Callback{
         super.onActivityCreated(savedInstanceState);
         assignViews();//添加控件
         initTodayData();//取得今天步数
-        Log.d("step",String.valueOf(CURRENT_SETP));
+
         initexpression();//计算卡路里和公里数
         initData();//初始化数据
 
@@ -77,6 +80,9 @@ public class HomeFragment extends Fragment implements Handler.Callback{
         mCalorie=(TextView)getActivity().findViewById(R.id.tv_calorie);
         mStepcount=(TextView)getActivity().findViewById(R.id.tv_stepcount);
         mKilometer=(TextView)getActivity().findViewById(R.id.tv_Kilometer);
+
+        mRecord=(LinearLayout)getActivity().findViewById(R.id.ll_record);
+        mRecord.setOnClickListener(this);
 
     }
 
@@ -148,6 +154,16 @@ public class HomeFragment extends Fragment implements Handler.Callback{
 
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.ll_record:
+                startActivity(new Intent(getContext(),RecordActivity.class));//打开锻炼记录页面
+                break;
+            default:
+                break;
+        }
+    }
 
     /**
      * 用于查询应用服务（application Service）的状态的一种interface，

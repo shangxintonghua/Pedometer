@@ -26,10 +26,19 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private LinearLayout ll_setting;
 
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return  inflater.inflate(R.layout.mine_fragment,container,false);
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        assignViews();
+
     }
 
     /**
@@ -53,6 +62,13 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    /**
+     * 搜索蓝牙设备
+     */
+    private void search(){
+
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -60,6 +76,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ll_bluetood:
                 //搜索蓝牙设备
+                search();
                 break;
             case R.id.ll_question:
                 break;

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--头部-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/iv_return"
+            android:contentDescription="返回按钮"
+            android:src="@drawable/map_return"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/iv_share"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/map_share"
+            android:contentDescription="分享图片（加上水印）"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+
+    <!--地图-->
+
+    <com.amap.api.maps.MapView
+
+        android:id="@+id/mv_run"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="300dp"/>
+
+    <!--底部-->
+
+    <LinearLayout
+        android:background="@drawable/selector_map_button"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Chronometer
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:format="00:00:00"
+                android:gravity="center"
+                android:id="@+id/ch_time"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white_grep"
+                android:text="时长"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_kilemter"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white_grep"
+                android:text="米"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Button
+
+                android:id="@+id/bt_run"
+                android:textColor="@color/white"
+                android:background="@drawable/map_button"
+                android:text="开始跑步"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Button
+
+                android:id="@+id/bt_cancle"
+                android:textColor="@color/white"
+                android:background="@drawable/map_button"
+                android:text="停止跑步"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

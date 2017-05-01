@@ -2,4 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="map_run_small_button">25dp</dimen>
+    <dimen name="map_run_big_button">50dp</dimen>
+    <dimen name="map_radius">30dp</dimen>
 </resources>

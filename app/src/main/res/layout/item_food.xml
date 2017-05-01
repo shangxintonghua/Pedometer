@@ -1,23 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:gravity="center_vertical"
+        android:id="@+id/ll_pink"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/item_food"
-            android:layout_width="32dp"
-            android:layout_height="32dp" />
-        <TextView
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <!-- 左边的文字 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_right_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text="使用冰淇凌有利于健康，有利于健康健康健康是伦sdfsdfsdfsfsfsfasfasdfsfsdfsdfasfsfsfsfsdfsdfsdf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"
+            android:gravity="center|top"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:lines="2"
+                android:text="和不会聊天的人聊天是怎样一种感受?字数限制是30个字.补足字数"
+                android:textColor="#333333"
+                android:textSize="16dp" />
+
+            <!-- 用户投稿和图标 -->
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2014-10-11"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="搜狐体育"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 图片 -->
+
+        <LinearLayout
+            android:id="@+id/ll_left_iv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:src="@drawable/downerror" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

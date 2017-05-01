@@ -8,16 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <ImageView
+            android:id="@+id/iv_discover"
             android:layout_marginLeft="20dp"
             android:src="@drawable/item_article"
-            android:layout_width="32dp"
-            android:layout_height="32dp" />
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text="运动运动运动运动运动晕死了的房间数量大幅减少的雷锋精神浪费上的飞机数量单价发射点发链接空手道解放"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="68dp"
+            android:layout_height="68dp" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:id="@+id/tv_discover_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="努力生活，拒绝满身"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
